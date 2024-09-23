@@ -1,0 +1,205 @@
+<div class="home-img">
+  <img [src]="slideUrl">
+  <div class="img-font">
+    <h2>Travel Light</h2>
+    <div class="img-text">
+      <span>Carry-on. Takeoff.</span>
+      <span>No extra baggage needed.</span>
+    </div>
+    <div class="btn">
+      <div class="btn-a">
+        <a href="">SHOP WOMAN</a>
+      </div>
+      <div class="btn-b">
+        <a href="">SHOP MEN</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="all-cate">
+  <div class="title">
+    <p>Shop by Category</p>
+  </div>
+  <div class="shop-cate">
+    <div class="cate-main">
+      <a href="">
+        <div class="cate-img">
+          <img
+            src="https://media.everlane.com/image/upload/c_scale,dpr_2.0,f_auto,q_auto,w_auto/c_limit,w_1300/v1/i/dc459177_db79.jpg"
+            alt="">
+        </div>
+        <div class="cate-title">
+          <p>TEES</p>
+        </div>
+      </a>
+    </div>
+    <div class="cate-main">
+      <a href="">
+        <div class="cate-img">
+          <img
+            src="https://media.everlane.com/image/upload/c_scale,dpr_2.0,f_auto,q_auto,w_auto/c_limit,w_1300/v1/i/5614138b_a56d.jpg"
+            alt="">
+        </div>
+        <div class="cate-title">
+          <p>PANTS</p>
+        </div>
+      </a>
+    </div>
+    <div class="cate-main">
+      <a href="">
+        <div class="cate-img">
+          <img
+            src="https://media.everlane.com/image/upload/c_scale,dpr_2.0,f_auto,q_auto,w_auto/c_limit,w_1300/v1/i/ed4b651f_c819.jpg"
+            alt="">
+        </div>
+        <div class="cate-title">
+          <p>TOPS</p>
+        </div>
+      </a>
+    </div>
+    <div class="cate-main">
+      <a href="">
+        <div class="cate-img">
+          <img
+            src="https://media.everlane.com/image/upload/c_scale,dpr_2.0,f_auto,q_auto,w_auto/c_limit,w_1300/v1/i/a7f8f15b_a4f8.jpg"
+            alt="">
+        </div>
+        <div class="cate-title">
+          <p>JEANS</p>
+        </div>
+      </a>
+    </div>
+    <div class="cate-main">
+      <a href="">
+        <div class="cate-img">
+          <img
+            src="https://media.everlane.com/image/upload/c_scale,dpr_2.0,f_auto,q_auto,w_auto/c_limit,w_1300/v1/i/3d6b6c5f_e5f4.jpg"
+            alt="">
+        </div>
+        <div class="cate-title">
+          <p>SPORTS</p>
+        </div>
+      </a>
+    </div>
+    <div class="cate-main">
+      <a href="">
+        <div class="cate-img">
+          <img
+            src="https://media.everlane.com/image/upload/c_scale,dpr_2.0,f_auto,q_auto,w_auto/c_limit,w_1300/v1/i/6c06d252_5836.jpg"
+            alt="">
+        </div>
+        <div class="cate-title">
+          <p>SHOES</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<div class="shop">
+  <div class="shop-box">
+    <img
+      src="https://media.everlane.com/image/upload/c_scale,dpr_2.0,f_auto,q_auto,w_auto/c_limit,w_1300/v1/i/3200df9e_6211.jpg"
+      alt="">
+    <div class="shop-title">
+      <p>New Arrivals</p>
+      <a href="">SHOP THE LATEST</a>
+    </div>
+  </div>
+  <div class="shop-box">
+    <img
+      src="https://media.everlane.com/image/upload/c_scale,dpr_2.0,f_auto,q_auto,w_auto/c_limit,w_1300/v1/i/e93a04c9_0760.jpg"
+      alt="">
+    <div class="shop-title">
+      <p>The Summer Edit</p>
+      <a href="">SHOP NOW</a>
+    </div>
+  </div>
+  <div class="shop-box">
+    <img
+      src="https://media.everlane.com/image/upload/c_scale,dpr_2.0,f_auto,q_auto,w_auto/c_limit,w_1300/v1/i/7b0a7637_9e57.jpg"
+      alt="">
+    <div class="shop-title">
+      <p>Best Sellers</p>
+      <a href="">SHOP YOUR FAVORITES</a>
+    </div>
+  </div>
+</div>
+
+<div class="about">
+  <div class="about-main">
+    <img src="https://media.everlane.com/image/upload/c_scale,dpr_1.5,f_auto,q_65,w_auto/v1/i/8966ceab_699e.png" alt="">
+    <div class="about-title">
+      <h4>We’re on a Mission To Clean Up the Industry</h4>
+      <span>Read about our progress in our latest Impact Report.</span>
+      <a href="">LEARN MORE</a>
+    </div>
+  </div>
+</div>
+
+<div class="slider-container">
+  <div class="slider" [style.transform]="getTransform()">
+    <div class="slide" *ngFor="let slide of slides">
+      <div class="slide-title">
+        <span>{{ slide.title }}</span>
+        <div class="rating">
+          <i class="star" [class.selected]="currentRating >= 1" (click)="rate(1)">★</i>
+          <i class="star" [class.selected]="currentRating >= 2" (click)="rate(2)">★</i>
+          <i class="star" [class.selected]="currentRating >= 3" (click)="rate(3)">★</i>
+          <i class="star" [class.selected]="currentRating >= 4" (click)="rate(4)">★</i>
+          <i class="star" [class.selected]="currentRating >= 5" (click)="rate(5)">★</i>
+        </div>
+        <p>Current Rating: {{ currentRating }}</p>
+        <p>{{ slide.text }}</p>
+        <p class="slide-w">{{slide.foot}}</p>
+      </div>
+      <img [src]="slide.img" alt="Photo">
+    </div>
+  </div>
+  <button class="prev" (click)="prev()">&#10094;</button>
+  <button class="next" (click)="next()">&#10095;</button>
+</div>
+
+
+
+
+
+
+<div class="details">
+  <div class="box">
+    <div class="box-img">
+      <img
+        src="https://media.everlane.com/image/upload/c_scale,dpr_2.0,f_auto,q_auto,w_auto/c_limit,w_1300/v1/i/6ffddf8e_4c4b.png"
+        alt="">
+    </div>
+    <div class="box-title">
+      <p>Complimentary Shipping</p>
+      <span>Enjoy free shipping on U.S. orders over $100.</span>
+      <i class="ri-arrow-right-line"></i>
+    </div>
+  </div>
+  <div class="box">
+    <div class="box-img">
+      <img
+        src="https://media.everlane.com/image/upload/c_scale,dpr_2.0,f_auto,q_auto,w_auto/c_limit,w_1300/v1/i/488971a2_352c.png"
+        alt="">
+    </div>
+    <div class="box-title">
+      <p>Consciously Crafted</p>
+      <span>Designed with you and the planet in mind.</span>
+    </div>
+  </div>
+  <div class="box">
+    <div class="box-img">
+      <img
+        src="https://media.everlane.com/image/upload/c_scale,dpr_2.0,f_auto,q_auto,w_auto/c_limit,w_1300/v1/i/dd9caf2a_f661.png"
+        alt="">
+    </div>
+    <div class="box-title">
+      <p>Come Say Hi</p>
+      <span>We have 11 stores across the U.S.</span>
+    </div>
+  </div>
+</div>
+

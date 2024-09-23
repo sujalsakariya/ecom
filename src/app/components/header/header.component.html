@@ -1,0 +1,114 @@
+<!-- <header>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <img [src]="logoUrl" alt="Logo">
+            <a routerLink="/">E-Commerce</a>
+        </div>
+        <div class="navbar-links">
+            <div class="hs">
+                <a routerLink="/" routerLinkActive="active">Home</a>
+                <a routerLink="/products" routerLinkActive="active">Products</a>
+                <a routerLink="/cart" routerLinkActive="active">Cart</a>
+                <a routerLink="/checkout" routerLinkActive="active">Checkout</a>
+            </div>
+            <div class="ls">
+                <a routerLink="/login" routerLinkActive="active">Login</a>
+                <a routerLink="/signup" routerLinkActive="active">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+</header> -->
+
+<div class="main-navbar shadow-sm sticky-top">
+    <div class="top-navbar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 my-auto d-none d-sm-none d-md-block d-lg-block">
+                    <div class="navbar-brand">
+                        <img [src]="logoUrl" alt="Logo">
+                        <a routerLink="/">FashionHub</a>
+                    </div>
+                </div>
+                <div class="col-md-5 my-auto src-btn">
+                    <form role="search">
+                        <div class="input-group">
+                            <input type="search" placeholder="Search your product" class="form-control" />
+                            <button class="btn bg-white" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16">
+                                <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018"/>
+                                <path d="M13 6.5a6.47 6.47 0 0 1-1.258 3.844q.06.044.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11"/>
+                              </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-5 my-auto">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/cart" routerLinkActive="active">
+                                <i class="fa fa-shopping-cart"></i> Cart
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-heart"></i> Wishlist
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="ls">
+                                <a routerLink="/login" routerLinkActive="active" [@slider]="sliderState">Login</a>
+                            </div>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-list"></i> My Orders</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-heart"></i> My Wishlist</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-shopping-cart"></i> My Cart</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand d-block d-sm-block d-md-none d-lg-none" href="#">
+                Funda Ecom
+            </a> -->
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 new-ul">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/">New Arrivals</a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" href="#" routerLink="/home">Men</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Woman</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Best Selles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Clothing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tees</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dresses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Jeans & Denim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Shoes, Bags & Accessories</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
